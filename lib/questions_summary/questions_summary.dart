@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:adv_basics/questions_summary/summary_item.dart';
 
 class QuestionsSummary extends StatelessWidget {
@@ -9,12 +10,14 @@ class QuestionsSummary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 300,
+      height: 400,
       child: SingleChildScrollView(
         child: Column(
-          children: summaryData.map((summary) {
-            return SummaryItem(summary);
-          }).toList(),
+          children: summaryData.map(
+            (data) {
+              return SummaryItem(data);
+            },
+          ).toList(),
         ),
       ),
     );
